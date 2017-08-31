@@ -1,0 +1,269 @@
+<div class="innerPage">
+    <header>
+        <div class="container-fluid pbottom10">
+            <div class="row-fluid">
+                <div class="col-lg-2 col-sm-2">
+                    <div class="brand">NCBS Travel</div>
+                </div>
+                <div class="col-lg-9 col-lg-offset-1 col-sm-10 headerRight">
+                    <div class="headedTopRight">
+                     
+                        <div class="headerUser">
+                          <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="images/user.jpg" alt=""></a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dd">
+                               <div class="username"><span>Welcome,</span> {{logginName}}</div>
+                                <ul>
+                                    <li><a href="#">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-default navfixed">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="javascript:void(0)" class="active">NCBS DTR Page(PRE)</a></li>
+                        <li><a ui-sref="ncbspostpage">NCBS DTR Page(POST)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="content">
+        <div class="container-fluid">
+		  <div class="row customiedFrom">
+                        <div class="col-lg-12">
+                            <div class="row">
+							 <div class="col-lg-8 col-lg-offset-3">
+								 <div class="form-group">
+								 <div class="col-sm-6"> <label for="" class="col-sm-4 control-label">Employee Name</label>{{logginName}}</div>
+								 <label for="" class="col-sm-4 control-label">Employee Number</label>
+								 <div>{{loggedInUserID}}</div>
+								</div>	
+								
+							</div>
+								 <div class="col-lg-8 col-lg-offset-3">
+							 <div class="form-group">
+								 <div class="col-sm-6"> <label for="" class="col-sm-4 control-label">Email Address</label>{{logginEmail}}</div>
+								 <label for="" class="col-sm-4 control-label">Business Group</label>
+								 <div>A</div>
+								</div>
+</div>								
+                                <div class="col-lg-6 col-lg-offset-3">
+                                    <form class="form-horizontal" name="addUserForm" novalidate border="1">
+                                        <div class="form-group">
+                                            <label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Mission Type</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" name="missiontype" ng-model="addUserData.first_name" class="form-control" value="" required />
+                                                <span style="color:red" ng-show="addUserForm.missiontype.$dirty && addUserForm.missiontype.$invalid">
+    										<span ng-show="addUserForm.missiontype.$error.required">Mission Type is required.</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Travel Type</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" name="traveltype" ng-model="addUserData.traveltype" class="form-control" value="" required />
+                                                <span style="color:red" ng-show="addUserForm.traveltype.$dirty && addUserForm.traveltype.$invalid">
+    										<span ng-show="addUserForm.traveltype.$error.required">Travel Type is required.</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="" class="col-sm-4 control-label">Travel Destination / Route</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" name="traveldestination" ng-model="addUserData.traveldestination" class="form-control" value="" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Ticket / Trip</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" name="tickettrip" class="form-control" ng-model="addUserData.tickettrip" value="" required>
+                                                <span style="color:red" ng-show="addUserForm.tickettrip.$dirty && addUserForm.tickettrip.$invalid">
+										<span ng-show="addUserForm.tickettrip.$error.required">Ticket / Trip is required.</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="" class="col-sm-4 control-label">Road</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" name="road" ng-model="addUserData.road" class="form-control" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="" class="col-sm-4 control-label">Total Kilometers Travelled</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" name="total_kilometter_travel" ng-model="addUserData.total_kilometter_travel" class="form-control" value="" required>
+                                            </div>
+                                        </div>
+										
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Travel Start Date</label>
+									<div class="col-sm-6">
+									<input type="text" name="travel_start_date" ng-model="addUserData.travel_start_date" class="form-control" value="" required>
+								<span style="color:red" ng-show="addUserForm.travel_start_date.$dirty && addUserForm.travel_start_date.$invalid">
+										<span ng-show="addUserForm.travel_start_date.$error.required">Travel Start Date is required.</span>
+										</span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label">Depature Time</label>
+									<div class="col-sm-6">
+										<input type="text" name="depature_time" ng-model="addUserData.depature_time" class="form-control" value="" />
+									</div>
+								</div>
+									
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Travel Return Date</label>
+									<div class="col-sm-6">
+									<input type="text" name="travel_return_date" ng-model="addUserData.travel_return_date" class="form-control" value="" required>
+								<span style="color:red" ng-show="addUserForm.travel_return_date.$dirty && addUserForm.travel_return_date.$invalid">
+										<span ng-show="addUserForm.travel_return_date.$error.required">Travel Return Date is required.</span>
+										</span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label">Arrival Time</label>
+									<div class="col-sm-6">
+										<input type="text" name="arrival_time" ng-model="addUserData.arrival_time" class="form-control" value="" />
+										</span>
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label">Number Of Days Travelled</label>
+									<div class="col-sm-6">
+										<input type="text" name="number_of_days_travelled" ng-model="addUserData.number_of_days_travelled" class="form-control" value="" />
+										</span>
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Accomodation Arranged By</label>
+									<div class="col-sm-6">
+									<input type="text" name="accomodation_arranged_by" ng-model="addUserData.accomodation_arranged_by" class="form-control" value="" required>
+								<span style="color:red" ng-show="addUserForm.accomodation_arranged_by.$dirty && addUserForm.accomodation_arranged_by.$invalid">
+								<span ng-show="addUserForm.accomodation_arranged_by.$error.required">Accomodation Arranged By is required.</span>
+								</span>
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label">Employee Category</label>
+									<div class="col-sm-6">
+										<input type="text" name="employee_category" ng-model="addUserData.employee_category" class="form-control" value="" />
+										</span>
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label">Travel Category</label>
+									<div class="col-sm-6">
+										<input type="text" name="travel_category" ng-model="addUserData.travel_category" class="form-control" value="" />
+										</span>
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Air-Ticket Arranged By</label>
+									<div class="col-sm-6">
+									<input type="text" name="air_ticket_arranged_by" ng-model="addUserData.air_ticket_arranged_by" class="form-control" value="" required>
+									<span style="color:red" ng-show="addUserForm.air_ticket_arranged_by.$dirty && addUserForm.air_ticket_arranged_by.$invalid"><span ng-show="addUserForm.air_ticket_arranged_by.$error.required">Air-Ticket Arranged By is required.</span>		</span>
+									</div>
+								</div>
+								
+									
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Road- Arranged By</label>
+									<div class="col-sm-6">
+									<input type="text" name="road_arranged_by" ng-model="addUserData.road_arranged_by" class="form-control" value="" required>
+								<span style="color:red" ng-show="addUserForm.road_arranged_by.$dirty && addUserForm.road_arranged_by.$invalid">
+								<span ng-show="addUserForm.road_arranged_by.$error.required">Road Arranged By is required.</span>
+								</span>
+									</div>
+								</div>
+								
+
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label">Other Expenses</label>
+									<div class="col-sm-6">
+										<input type="text" name="other_expenses" ng-model="addUserData.other_expenses" class="form-control" value="" />
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label">Per-Diem</label>
+									<div class="col-sm-6">
+										<input type="text" name="perdiem" ng-model="addUserData.perdiem" class="form-control" value="" />
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label">Total Per-Diem</label>
+									<div class="col-sm-6">
+										<input type="text" name="total_perdiem" ng-model="addUserData.total_perdiem" class="form-control" value="" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label">Hotel Name</label>
+									<div class="col-sm-6">
+										<input type="text" name="hotel_name" ng-model="addUserData.hotel_name" class="form-control" value="" />
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label">PNR Number</label>
+									<div class="col-sm-6">
+										<input type="text" name="pnr_number" ng-model="addUserData.pnr_number" class="form-control" value="" />
+									</div>
+								</div>
+								
+								
+								<div class="form-group">
+									<label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Purpose</label>
+									<div class="col-sm-6">
+									 <textarea class="form-control descriptionTextArea descriptionTextArea2" ng-model="addUserData.description" rows="3" required ></textarea>
+									<span style="color:red" ng-show="addUserForm.description.$dirty && addUserForm.description.$invalid">
+									<span ng-show="addUserForm.description.$error.required">Purpose is required.</span>
+									</span>
+									</div>
+								</div>
+
+								
+                                  <div class="form-group">
+                                    <label for="" class="col-sm-4 control-label">Attachment</label>
+                                    <div class="col-sm-6">
+                                        <div class="dropzone" file-dropzone="[image/png, image/jpeg, image/gif]" file="image" file-name="imageFileName" data-max-file-size="3">
+                                        </div>
+                                        <form action>
+                                            <div class="imageDragDrop" placeholder="Image browse or Drag and Drop Here">
+                                                <input type="file" fileread="uploadme.src" class="imageDragArea" />
+                                            </div>
+                                            <div class="image-container" ng-class="{'in': uploadme.src, 'dummy': !uploadme.src}">
+                                                <img data-ng-src="{{uploadme.src}}">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-12 submitArea">
+                                <div class="col-sm-offset-5 col-sm-6">
+							<button type="button" class="btn btn-link" ng-click="onCancelUser()" title="Cancel Sensor">Cancel</button>
+                            <span class="btn-divider"></span>
+                            <button type="submit" class="btn btn-default btnSave" ng-click="OnSubmitUser(addUserData)" title="Save Sensor">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+        </div>
+    </div>
