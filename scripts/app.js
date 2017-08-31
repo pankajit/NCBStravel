@@ -20,6 +20,11 @@ travelApp.config(function ($stateProvider, $urlRouterProvider) {
             url: '/ncbspostpage',
             templateUrl: 'views/postpage.html',
             controller: 'ncbspostpageCtrl'
+        })
+		.state('approval', {
+            url: '/approval',
+            templateUrl: 'views/approval.html',
+            controller: 'approvalCtrl'
         });
     $urlRouterProvider.otherwise('/login');
 });
