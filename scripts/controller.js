@@ -83,6 +83,10 @@
     angular.module('travel.controller.main', [])
         .controller('mainCtrl', ['$http', '$scope', '$rootScope', '$state', 'getService','$window', 'ModalService', function ($http, $scope, $rootScope, $state, getService, $window,ModalService) {
 			
+			
+			
+			
+			
     }]);
 
 	angular.module('travel.controller.ncbspostpage', [])
