@@ -54,6 +54,9 @@
 												<option value="1">1</option>
 												<option value="2">2</option>
 											</select>
+											<span style="color:red" ng-show="addPostForm.travel_request_id.$dirty && addPostForm.travel_request_id.$invalid">
+    										<span ng-show="addPostForm.travel_request_id.$error.required">Travel Request Id.</span>
+                                            </span>
                                             </div>
                                         </div>
 										<div class="form-group">
@@ -97,10 +100,11 @@
 										
 								<div class="form-group">
 									<label for="" class="col-sm-4 control-label">Travel Start Date</label>
-									<div class="col-sm-6">
-									<input type="text" name="travel_start_date" ng-model="addPostData.travel_start_date" class="form-control" value="" />
+								 <div class="col-sm-6 input-group date" style="padding-left: 15px;">
+									<input type="text" name="travel_start_date" datetime-picker ng-model="addPostData.travel_start_date" date-format="yyyy-MM-dd" date-only class="form-control" value="" /><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 									</div>
 								</div>
+								
 								<div class="form-group">
 									<label for="" class="col-sm-4 control-label">Depature Time</label>
 									<div class="col-sm-6">
@@ -110,8 +114,8 @@
 									
 								<div class="form-group">
 									<label for="" class="col-sm-4 control-label">Travel Return Date</label>
-									<div class="col-sm-6">
-									<input type="text" name="travel_return_date" ng-model="addPostData.travel_return_date" class="form-control" value="" />
+									 <div class="col-sm-6 input-group date" style="padding-left: 15px;">
+										<input type="text" name="travel_return_date" datetime-picker ng-model="addUserData.travel_return_date" class="form-control" date-format="yyyy-MM-dd" date-only value="" required /><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 									</div>
 								</div>
 								<div class="form-group">
@@ -205,7 +209,7 @@
 								<div class="form-group">
 									<label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Purpose</label>
 									<div class="col-sm-6">
-									 <textarea class="form-control descriptionTextArea descriptionTextArea2" ng-model="addPostData.description" rows="3" required ></textarea>
+									 <textarea class="form-control descriptionTextArea descriptionTextArea2" name="description" ng-model="addPostData.description" rows="3" required ></textarea>
 									<span style="color:red" ng-show="addPostForm.description.$dirty && addPostForm.description.$invalid">
 									<span ng-show="addPostForm.description.$error.required">Purpose is required.</span>
 									</span>
@@ -235,7 +239,7 @@
                                 <div class="col-sm-offset-5 col-sm-6">
 							<button type="button" class="btn btn-link" ng-click="onCancelUser()" title="Cancel Sensor">Cancel</button>
                             <span class="btn-divider"></span>
-                            <button type="submit" class="btn btn-default btnSave" ng-click="OnSubmitUser(addPostData)" title="Save Sensor">Apply</button>
+                            <button type="submit" class="btn btn-default btnSave" ng-click="OnSubmitPostTravel(addPostData)" title="Save Sensor">Apply</button>
                                 </div>
                             </div>
                         </div>

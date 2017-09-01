@@ -97,9 +97,10 @@
 										
 								<div class="form-group">
 									<label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Travel Start Date</label>
-									<div class="col-sm-6">
-									<input type="text" name="travel_start_date" ng-model="addUserData.travel_start_date" class="form-control" value="" required>
-								<span style="color:red" ng-show="addUserForm.travel_start_date.$dirty && addUserForm.travel_start_date.$invalid">
+								 <div class="col-sm-6 input-group date" style="padding-left: 15px;">
+									<input type="text" name="travel_start_date" datetime-picker ng-model="addUserData.travel_start_date" date-format="yyyy-MM-dd" date-only class="form-control" value="" required /><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+									
+									<span style="color:red" ng-show="addUserForm.travel_start_date.$dirty && addUserForm.travel_start_date.$invalid">
 										<span ng-show="addUserForm.travel_start_date.$error.required">Travel Start Date is required.</span>
 										</span>
 									</div>
@@ -107,16 +108,16 @@
 								<div class="form-group">
 									<label for="" class="col-sm-4 control-label">Depature Time</label>
 									<div class="col-sm-6">
-										<input type="text" name="depature_time" ng-model="addUserData.depature_time" class="form-control" value="" />
+									<input type="text" name="depature_time" ng-model="addUserData.depature_time" class="form-control" value="" />
 									</div>
 								</div>
-									
 								<div class="form-group">
 									<label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Travel Return Date</label>
-									<div class="col-sm-6">
-									<input type="text" name="travel_return_date" ng-model="addUserData.travel_return_date" class="form-control" value="" required>
-								<span style="color:red" ng-show="addUserForm.travel_return_date.$dirty && addUserForm.travel_return_date.$invalid">
-										<span ng-show="addUserForm.travel_return_date.$error.required">Travel Return Date is required.</span>
+									 <div class="col-sm-6 input-group date" style="padding-left: 15px;">
+									<input type="text" name="travel_return_date" datetime-picker ng-model="addUserData.travel_return_date" class="form-control" date-format="yyyy-MM-dd" date-only value="" required /><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+									<span style="color:red" ng-show="addUserForm.travel_return_date.$dirty && addUserForm.travel_return_date.$invalid">
+									
+									<span ng-show="addUserForm.travel_return_date.$error.required">Travel Return Date is required.</span>
 										</span>
 									</div>
 								</div>
@@ -220,7 +221,7 @@
 								<div class="form-group">
 									<label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Purpose</label>
 									<div class="col-sm-6">
-									 <textarea class="form-control descriptionTextArea descriptionTextArea2" ng-model="addUserData.description" rows="3" required ></textarea>
+									 <textarea class="form-control descriptionTextArea descriptionTextArea2" name="description" ng-model="addUserData.description" rows="3" required ></textarea>
 									<span style="color:red" ng-show="addUserForm.description.$dirty && addUserForm.description.$invalid">
 									<span ng-show="addUserForm.description.$error.required">Purpose is required.</span>
 									</span>
@@ -258,3 +259,11 @@
                     </div>
         </div>
     </div>
+	
+<script type="text/javascript">
+$(document).ready(function(){
+//$('.clockpicker').clockpicker();
+
+		
+});
+</script>

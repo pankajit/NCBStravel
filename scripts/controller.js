@@ -92,47 +92,44 @@
 			
 		$scope.addUserData = {};	
 			
-		 /* $scope.OnSubmitUser = function () {
-
-               if ($scope.events.length == 0)
-                    $scope.eventsEmptyArr = true;
-                else
-                    $scope.eventsEmptyArr = false;
-
-
+		  $scope.OnSubmitUser = function () {
                 var data = {
-                    i_FIRST_NAME: $scope.addUserData.first_name,
-                    i_LAST_NAME: $scope.addUserData.last_name,
-                    i_DESIGNATION: $scope.addUserData.designation,
-                    i_PRIMARY_EMAIL_ID: $scope.addUserData.email_id,
-                    i_WORK_PHONE: $scope.addUserData.work_phone,
-                    i_CELL_PHONE: $scope.addUserData.cell_phone,
-                    i_USER_ROLE: $scope.addUserData.user_role | 'Manager',
-                    i_BADGE_ID:$scope.addUserData.badge_id,
-                    i_COUNTRY: $scope.events[0] || null,
-                    i_CITY: $scope.events[1] || null,
-                    i_ADDR1: $scope.events[2] || null,
-                    i_ADDR2: $scope.events[3] || null,
-                    i_ADDR3: $scope.events[4] || null,
-                    i_ADDR4: $scope.events[5] || null,
-                    i_IS_ACTIVE: $scope.addUserData.is_active,
-                    i_USERNAME: $scope.addUserData.user_name,
-                    i_PASSWORD: $scope.addUserData.password,
-                    i_CONFIRM_PWD: $scope.addUserData.confirm_password,
-                    i_IMAGE: $scope.uploadme.src || '',
-                    i_CREATED_BY: "admin",
-                    i_LAST_UPDATED_BY: "admin",
+                    missiontype: $scope.addUserData.missiontype,
+                    traveltype: $scope.addUserData.traveltype,
+                    traveltype: $scope.addUserData.traveltype,
+                    tickettrip: $scope.addUserData.tickettrip,
+                    road: $scope.addUserData.road,
+                    total_kilometter_travel: $scope.addUserData.total_kilometter_travel,
+                    travel_start_date: $scope.addUserData.travel_start_date,
+                    depature_time:$scope.addUserData.depature_time,
+                    travel_return_date: $scope.addUserData.travel_return_date,
+                    arrival_time: $scope.addUserData.arrival_time,
+                    number_of_days_travelled: $scope.addUserData.number_of_days_travelled,
+                    accomodation_arranged_by: $scope.addUserData.accomodation_arranged_by,
+					travel_category: $scope.addUserData.travel_category,
+					employee_category: $scope.addUserData.employee_category,
+					air_ticket_arranged_by: $scope.addUserData.air_ticket_arranged_by,
+					road_arranged_by: $scope.addUserData.road_arranged_by,
+					other_expenses: $scope.addUserData.other_expenses,
+					perdiem: $scope.addUserData.perdiem,
+					total_perdiem: $scope.addUserData.total_perdiem,
+					hotel_name: $scope.addUserData.hotel_name,
+					pnr_number: $scope.addUserData.pnr_number,
+					description: $scope.addUserData.description,
+					//i_IMAGE: $scope.uploadme.src || ''
                 };
 
 
 
 
-                if ($scope.addUserForm.$valid && !$scope.eventsEmptyArr) {
-                    getService.addUser(data).then(function (response) {
+                if ($scope.addUserForm.$valid) {
+                    /*getService.addUser(data).then(function (response) {
 
                         $state.go('users');
                         
-                    });
+                    });*/
+					alert('hello');
+					console.log(data);
                     
                 }
                 var form = $scope.addUserForm;
@@ -142,13 +139,60 @@
                         obj.$setDirty();
                     }
                 })
-            }*/
+            }
 			
 			
     }]);
 
 	angular.module('travel.controller.ncbspostpage', [])
         .controller('ncbspostpageCtrl', ['$http', '$scope', '$rootScope', '$state', 'getService','$window', 'ModalService', function ($http, $scope, $rootScope, $state, getService, $window,ModalService) {
+			
+			
+			
+		$scope.addPostData = {};	
+			
+		  $scope.OnSubmitPostTravel = function () {
+                var data = {
+                    missiontype: $scope.addPostData.missiontype,
+                    traveltype: $scope.addPostData.traveltype,
+                    traveltype: $scope.addPostData.traveltype,
+                    tickettrip: $scope.addPostData.tickettrip,
+                    road: $scope.addPostData.road,
+                    total_kilometter_travel: $scope.addPostData.total_kilometter_travel,
+                    travel_start_date: $scope.addPostData.travel_start_date,
+                    depature_time:$scope.addPostData.depature_time,
+                    travel_return_date: $scope.addPostData.travel_return_date,
+                    arrival_time: $scope.addPostData.arrival_time,
+                    number_of_days_travelled: $scope.addPostData.number_of_days_travelled,
+                    accomodation_arranged_by: $scope.addPostData.accomodation_arranged_by,
+					travel_category: $scope.addPostData.travel_category,
+					employee_category: $scope.addPostData.employee_category,
+					air_ticket_arranged_by: $scope.addPostData.air_ticket_arranged_by,
+					road_arranged_by: $scope.addPostData.road_arranged_by,
+					other_expenses: $scope.addPostData.other_expenses,
+					perdiem: $scope.addPostData.perdiem,
+					total_perdiem: $scope.addPostData.total_perdiem,
+					hotel_name: $scope.addPostData.hotel_name,
+					pnr_number: $scope.addPostData.pnr_number,
+					description: $scope.addPostData.description,
+					//i_IMAGE: $scope.uploadme.src || ''
+                };
+
+                if ($scope.addPostForm.$valid) {
+                    
+					alert('hello');
+					console.log(data);
+                    
+                }
+                var form = $scope.addPostForm;
+                //Force the field validation
+                angular.forEach(form, function (obj) {
+                    if (angular.isObject(obj) && angular.isDefined(obj.$setDirty)) {
+                        obj.$setDirty();
+                    }
+                })
+            }
+			
 
     }]);
 	
