@@ -88,7 +88,9 @@
 
     angular.module('travel.controller.main', [])
         .controller('mainCtrl', ['$http', '$scope', '$rootScope', '$state', 'getService','$window', 'ModalService', function ($http, $scope, $rootScope, $state, getService, $window,ModalService) {
-			
+		
+		 $scope.uploadme = {};
+         $scope.uploadme.src = '';
 			
 		$scope.addUserData = {};	
 			
@@ -96,7 +98,7 @@
                 var data = {
                     missiontype: $scope.addUserData.missiontype,
                     traveltype: $scope.addUserData.traveltype,
-                    traveltype: $scope.addUserData.traveltype,
+                    traveldestination: $scope.addUserData.traveldestination,
                     tickettrip: $scope.addUserData.tickettrip,
                     road: $scope.addUserData.road,
                     total_kilometter_travel: $scope.addUserData.total_kilometter_travel,
@@ -126,11 +128,10 @@
                     /*getService.addUser(data).then(function (response) {
 
                         $state.go('users');
-                        
                     });*/
-					alert('hello');
+					//alert('hello');
 					console.log(data);
-                    
+
                 }
                 var form = $scope.addUserForm;
                 //Force the field validation
@@ -145,10 +146,8 @@
     }]);
 
 	angular.module('travel.controller.ncbspostpage', [])
-        .controller('ncbspostpageCtrl', ['$http', '$scope', '$rootScope', '$state', 'getService','$window', 'ModalService', function ($http, $scope, $rootScope, $state, getService, $window,ModalService) {
-			
-			
-			
+        .controller('ncbspostpageCtrl', ['$http', '$scope', '$rootScope', '$state', 'getService','$window', 'ModalService',function ($http, $scope, $rootScope, $state, getService, $window,ModalService) {
+
 		$scope.addPostData = {};	
 			
 		  $scope.OnSubmitPostTravel = function () {
@@ -180,7 +179,7 @@
 
                 if ($scope.addPostForm.$valid) {
                     
-					alert('hello');
+					//alert('hello');
 					console.log(data);
                     
                 }

@@ -107,8 +107,9 @@
 								
 								<div class="form-group">
 									<label for="" class="col-sm-4 control-label">Depature Time</label>
-									<div class="col-sm-6">
-										<input type="text" name="depature_time" ng-model="addPostData.depature_time" class="form-control" value="" />
+									<div class="col-sm-6 input-group clockpicker" style="padding-left: 15px;">
+											<input type="text" name="depature_time" ng-model="addPostData.depature_time" class="form-control" value="" />
+										<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
 									</div>
 								</div>
 									
@@ -120,9 +121,9 @@
 								</div>
 								<div class="form-group">
 									<label for="" class="col-sm-4 control-label">Arrival Time</label>
-									<div class="col-sm-6">
+									<div class="col-sm-6 input-group clockpicker" style="padding-left: 15px;">
 										<input type="text" name="arrival_time" ng-model="addPostData.arrival_time" class="form-control" value="" />
-										</span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
 									</div>
 								</div>
 								
@@ -237,7 +238,7 @@
                             </div>
                             <div class="form-group col-lg-12 submitArea">
                                 <div class="col-sm-offset-5 col-sm-6">
-							<button type="button" class="btn btn-link" ng-click="onCancelUser()" title="Cancel Sensor">Cancel</button>
+							<button type="button" class="btn btn-link" ng-click="onCancelUser()" title="Cancel">Cancel</button>
                             <span class="btn-divider"></span>
                             <button type="submit" class="btn btn-default btnSave" ng-click="OnSubmitPostTravel(addPostData)" title="Save Sensor">Apply</button>
                                 </div>
@@ -247,3 +248,10 @@
                     </div>
         </div>
     </div>
+	<script type="text/javascript">
+	$('.clockpicker').clockpicker({
+		placement: 'top',
+		align: 'left',
+		donetext: 'Done'
+	});
+	</script>

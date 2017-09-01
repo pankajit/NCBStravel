@@ -51,7 +51,7 @@
                                         <div class="form-group">
                                             <label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Mission Type</label>
                                             <div class="col-sm-6">
-                                                <input type="text" name="missiontype" ng-model="addUserData.first_name" class="form-control" value="" required />
+                                                <input type="text" name="missiontype" ng-model="addUserData.missiontype" class="form-control" value="" required />
                                                 <span style="color:red" ng-show="addUserForm.missiontype.$dirty && addUserForm.missiontype.$invalid">
     										<span ng-show="addUserForm.missiontype.$error.required">Mission Type is required.</span>
                                                 </span>
@@ -107,9 +107,11 @@
 								</div>
 								<div class="form-group">
 									<label for="" class="col-sm-4 control-label">Depature Time</label>
-									<div class="col-sm-6">
-									<input type="text" name="depature_time" ng-model="addUserData.depature_time" class="form-control" value="" />
+									<div class="col-sm-6 input-group clockpicker" style="padding-left: 15px;">
+											<input type="text" name="depature_time" ng-model="addUserData.depature_time" class="form-control" value="" />
+										<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
 									</div>
+							
 								</div>
 								<div class="form-group">
 									<label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Travel Return Date</label>
@@ -123,9 +125,9 @@
 								</div>
 								<div class="form-group">
 									<label for="" class="col-sm-4 control-label">Arrival Time</label>
-									<div class="col-sm-6">
+									<div class="col-sm-6 input-group clockpicker" style="padding-left: 15px;">
 										<input type="text" name="arrival_time" ng-model="addUserData.arrival_time" class="form-control" value="" />
-										</span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
 									</div>
 								</div>
 								
@@ -249,7 +251,7 @@
                             </div>
                             <div class="form-group col-lg-12 submitArea">
                                 <div class="col-sm-offset-5 col-sm-6">
-							<button type="button" class="btn btn-link" ng-click="onCancelUser()" title="Cancel Sensor">Cancel</button>
+							<button type="button" class="btn btn-link" ng-click="onCancelUser()" title="Cancel">Cancel</button>
                             <span class="btn-divider"></span>
                             <button type="submit" class="btn btn-default btnSave" ng-click="OnSubmitUser(addUserData)" title="Save Sensor">Apply</button>
                                 </div>
@@ -261,9 +263,9 @@
     </div>
 	
 <script type="text/javascript">
-$(document).ready(function(){
-//$('.clockpicker').clockpicker();
-
-		
-});
-</script>
+	$('.clockpicker').clockpicker({
+		placement: 'top',
+		align: 'left',
+		donetext: 'Done'
+	});
+	</script>
