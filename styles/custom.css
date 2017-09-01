@@ -86,7 +86,7 @@ a:focus {
 .login-page .form h2 {
     margin-bottom: 25px;
     font-size: 24px;
-    color: #ff6600;
+    color: #fff;
     text-align: left;
     font-family: 'roboto_light';
 }
@@ -113,7 +113,7 @@ a:focus {
 .login-page .form button {
     font-family: 'roboto_bold';
     outline: 0;
-    background: #ff6600;
+    background: #39b539;
     width: 100%;
     border: 0;
     padding: 10px;
@@ -129,7 +129,7 @@ a:focus {
 .login-page .form button:hover,
 .login-page .form button:active,
 .login-page .form button:focus {
-    background: #ff6600;
+    background: #39b539;
 }
 
 .login-page .form .message {
@@ -454,7 +454,7 @@ header .navbar-default .navbar-nav>li>a:focus {
 }
 
 header .navbar-default .navbar-nav>li>a.active {
-    border-bottom: 4px solid #ff6600;
+    border-bottom: 4px solid #39b539;
     color: #fff;
 }
 
@@ -849,7 +849,7 @@ mapNormalWidth {}
 
 .btnAddNew {
     padding: 6px 15px;
-    background-color: #ff6600;
+    background-color: #39b539;
     color: #fff;
     font-family: 'roboto_regular';
     font-size: 16px;
@@ -860,7 +860,7 @@ mapNormalWidth {}
 
 .btnAddNew:hover,
 .btnAddNew:focus {
-    background-color: #ff6600;
+    background-color: #39b539;
     text-decoration: none;
     color: #fff;
 }
@@ -1352,7 +1352,7 @@ mapNormalWidth {}
 
 .customiedFrom button.btnSave,
 .btnSave {
-    background-color: #ff6600;
+    background-color: #39b539;
     padding: 7px 20px;
     border: 0;
     text-transform: uppercase;
@@ -1490,7 +1490,7 @@ label {
 
 .addInventory {
     margin: 20px 0 5px 0;
-    background-color: #ff6600;
+    background-color: #39b539;
     padding: 10px 0;
     text-align: center;
     border-radius: 5px;
@@ -2244,7 +2244,7 @@ label {
 
 .wordOrderInnerTab .nav-tabs>li.active>a {
     border: 0;
-    border-bottom: 5px solid #ff6600;
+    border-bottom: 5px solid #39b539;
 }
 
 .wordOrderInnerTab .nav-tabs>li>a:hover {
@@ -2356,7 +2356,7 @@ label {
     z-index: 999;
     min-width: 400px;
     min-height: 400px;
-    border-top: 7px solid #ff6600;
+    border-top: 7px solid #39b539;
 }
 
 .locationBox .arrow {
@@ -2795,7 +2795,7 @@ select.localytics-chosen {
     z-index: 999;
     min-width: 350px;
     min-height: 350px;
-    border-top: 7px solid #ff6600;
+    border-top: 7px solid #39b539;
 }
 
 .notifySearchBox .arrow {
@@ -3488,7 +3488,7 @@ pre {
 }
 .actualValue {
     font-size: 13px;
-    color: #ff6600;
+    color: #39b539;
 }
 .addMachineryActualBox {
     left: -100%;
@@ -3689,7 +3689,7 @@ pre {
     font-size: 15px;
 }
 .sidebar .panel-heading.active {
-    border-left: 4px solid #ff6600;   
+    border-left: 4px solid #39b539;   
     background-color: #ececec;
 }
 .viewusers .userpic img {
