@@ -12,12 +12,11 @@
                           <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="images/user.jpg" alt=""></a>
                             <div class="dropdown-menu dropdown-menu-right profile-dd">
-                               <div class="username"><span>Welcome,</span> {{logginName}}</div>
+                               <div class="username"><strong>Welcome,</strong> {{logginName}}</div>
                                 <ul>
-									<li><span>Employe No </span>{{logginEmpNo}}</li>
-									<li><span>Email </span>	<div>{{logginEmail}}</div></li>
-									<li><span>Business Group </span>{{logginBusinessNo}}
-								
+									<li><strong>Employee No </strong>{{logginEmpNo}}</li>
+									<li><strong>Email </strong>	<div>{{logginEmail}}</div></li>
+									<li><strong>Business Group </strong>{{logginBusinessNo}}
 									</li>
 									<li><a href="#">Logout</a></li>
                                 </ul>
@@ -99,11 +98,12 @@
 									<label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Travel Start Date</label>
 								 <div class="col-sm-6 input-group date" style="padding-left: 15px;">
 									<input type="text" name="travel_start_date" datetime-picker ng-model="addUserData.travel_start_date" date-format="yyyy-MM-dd" date-only class="form-control" value="" required /><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-									
-									<span style="color:red" ng-show="addUserForm.travel_start_date.$dirty && addUserForm.travel_start_date.$invalid">
+									</div>
+								
+									 <span style="color:red;padding-left: 239px;" ng-show="addUserForm.travel_start_date.$dirty && addUserForm.travel_start_date.$invalid">
 										<span ng-show="addUserForm.travel_start_date.$error.required">Travel Start Date is required.</span>
 										</span>
-									</div>
+									
 								</div>
 								<div class="form-group">
 									<label for="" class="col-sm-4 control-label">Depature Time</label>
@@ -117,11 +117,11 @@
 									<label for="" class="col-sm-4 control-label"><span class="mandatory">*</span>Travel Return Date</label>
 									 <div class="col-sm-6 input-group date" style="padding-left: 15px;">
 									<input type="text" name="travel_return_date" datetime-picker ng-model="addUserData.travel_return_date" class="form-control" date-format="yyyy-MM-dd" date-only value="" required /><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-									<span style="color:red" ng-show="addUserForm.travel_return_date.$dirty && addUserForm.travel_return_date.$invalid">
 									
+									</div>
+									<span style="color:red;padding-left: 239px;" ng-show="addUserForm.travel_return_date.$dirty && addUserForm.travel_return_date.$invalid">
 									<span ng-show="addUserForm.travel_return_date.$error.required">Travel Return Date is required.</span>
 										</span>
-									</div>
 								</div>
 								<div class="form-group">
 									<label for="" class="col-sm-4 control-label">Arrival Time</label>
