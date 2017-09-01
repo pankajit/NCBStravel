@@ -59,7 +59,7 @@ a:focus {
 }
 
 .logiBg {
-    background: url(../images/login-bg.png) repeat-x bottom;
+    /*background: url(../images/login-bg.png) repeat-x bottom;*/
     height: 100%;
     background-color: #003250;
 }
