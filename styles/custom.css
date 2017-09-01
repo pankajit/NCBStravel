@@ -86,7 +86,8 @@ a:focus {
 .login-page .form h2 {
     margin-bottom: 25px;
     font-size: 24px;
-    color: #fff;
+	font-weight:bold;
+    color: #004579;
     text-align: left;
     font-family: 'roboto_light';
 }
@@ -107,17 +108,17 @@ a:focus {
 
 .login-page .form input:focus {
     border-bottom: 1px solid #0286b3;
-    color: #FFFFFF;
+    color: #004579;
 }
 
 .login-page .form button {
     font-family: 'roboto_bold';
     outline: 0;
-    background: #39b539;
+    background: #5fb051;
     width: 100%;
     border: 0;
     padding: 10px;
-    color: #FFFFFF;
+    color: #004579;
     font-size: 17px;
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
@@ -129,7 +130,7 @@ a:focus {
 .login-page .form button:hover,
 .login-page .form button:active,
 .login-page .form button:focus {
-    background: #39b539;
+    background: #5fb051;
 }
 
 .login-page .form .message {
@@ -227,7 +228,7 @@ footer {
 
 footer p {
     text-align: center;
-    color: #FFF;
+    color: #004579;
     font-size: 12px;
     margin: 0;
 }
@@ -263,7 +264,7 @@ header {
 
 .brand {
     padding: 10px 0 0px 0px;
-	color:#fff;
+	color:#004579;
 }
 
 .headerRight {
@@ -272,7 +273,7 @@ header {
 
 header i.fa {
     font-size: 16px;
-    color: #fff;
+    color: #004579;
 }
 
 .headedTopRight {
@@ -442,7 +443,7 @@ header .navbar-default {
 }
 
 header .navbar-default .navbar-nav>li>a {
-    color: #fff;
+    color: #004579;
     text-transform: uppercase;
     font-size: 17px;
     padding: 8px 20px;
@@ -450,18 +451,19 @@ header .navbar-default .navbar-nav>li>a {
 
 header .navbar-default .navbar-nav>li>a:hover,
 header .navbar-default .navbar-nav>li>a:focus {
-    color: #fff;
+    color: #004579;
 }
 
 header .navbar-default .navbar-nav>li>a.active {
-    border-bottom: 4px solid #39b539;
-    color: #fff;
+    border-bottom: 4px solid #5fb051;
+    color: #004579;
+	font-weight:bold;
 }
 
 header .navbar-default .navbar-nav>li>a:hover,
 header .navbar-default .navbar-nav>li>a.active:hover,
 header .navbar-default .navbar-nav>li>a.active:focus {
-    color: #fff;
+    color: #004579;
 }
 
 .pullmenu img {
@@ -849,8 +851,8 @@ mapNormalWidth {}
 
 .btnAddNew {
     padding: 6px 15px;
-    background-color: #39b539;
-    color: #fff;
+    background-color: #5fb051;
+    color: #004579;
     font-family: 'roboto_regular';
     font-size: 16px;
     margin-left: 10px;
@@ -860,9 +862,9 @@ mapNormalWidth {}
 
 .btnAddNew:hover,
 .btnAddNew:focus {
-    background-color: #39b539;
+    background-color: #5fb051;
     text-decoration: none;
-    color: #fff;
+    color: #004579;
 }
 
 .btnAddNew span {
@@ -1352,11 +1354,11 @@ mapNormalWidth {}
 
 .customiedFrom button.btnSave,
 .btnSave {
-    background-color: #39b539;
+    background-color: #5fb051;
     padding: 7px 20px;
     border: 0;
     text-transform: uppercase;
-    color: #fff;
+    color: #004579;
 }
 
 .customiedFrom button.btn-link {
@@ -1490,7 +1492,7 @@ label {
 
 .addInventory {
     margin: 20px 0 5px 0;
-    background-color: #39b539;
+    background-color: #5fb051;
     padding: 10px 0;
     text-align: center;
     border-radius: 5px;
@@ -2244,7 +2246,7 @@ label {
 
 .wordOrderInnerTab .nav-tabs>li.active>a {
     border: 0;
-    border-bottom: 5px solid #39b539;
+    border-bottom: 5px solid #5fb051;
 }
 
 .wordOrderInnerTab .nav-tabs>li>a:hover {
@@ -2356,7 +2358,7 @@ label {
     z-index: 999;
     min-width: 400px;
     min-height: 400px;
-    border-top: 7px solid #39b539;
+    border-top: 7px solid #5fb051;
 }
 
 .locationBox .arrow {
@@ -2795,7 +2797,7 @@ select.localytics-chosen {
     z-index: 999;
     min-width: 350px;
     min-height: 350px;
-    border-top: 7px solid #39b539;
+    border-top: 7px solid #5fb051;
 }
 
 .notifySearchBox .arrow {
@@ -3488,7 +3490,7 @@ pre {
 }
 .actualValue {
     font-size: 13px;
-    color: #39b539;
+    color: #5fb051;
 }
 .addMachineryActualBox {
     left: -100%;
@@ -3689,7 +3691,7 @@ pre {
     font-size: 15px;
 }
 .sidebar .panel-heading.active {
-    border-left: 4px solid #39b539;   
+    border-left: 4px solid #5fb051;   
     background-color: #ececec;
 }
 .viewusers .userpic img {
@@ -4066,7 +4068,7 @@ pre {
         width: 300px;
     }
     header .navbar-default .navbar-nav>li>a:hover {
-        color: #fff;
+        color: #004579;
     }
 }
 
@@ -4189,7 +4191,7 @@ pre {
 }
 @media only screen and (min-width: 1280px) {
     header .navbar-default .navbar-nav>li>a:hover {
-        color: #fff;
+        color: #004579;
     }
     .headedTopRight {
         /*min-width: 762px;*/
